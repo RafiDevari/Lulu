@@ -1,30 +1,20 @@
 import 'package:flutter/material.dart';
-import 'app_colors.dart';
 
 class AppTextStyles {
   AppTextStyles._();
 
   static const TextTheme textTheme = TextTheme(
     titleLarge: TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-      color: AppColors.textPrimary,
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
     ),
     bodyMedium: TextStyle(
       fontSize: 16,
-      color: AppColors.textPrimary,
+      fontWeight: FontWeight.w400,
     ),
     labelLarge: TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
-      color: AppColors.textPrimary,
+      fontSize: 64,
+      fontWeight: FontWeight.w700,
     ),
-  );
-
-  // Optional: shortcut styles
-  static const TextStyle button = TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w600,
-    color: Colors.white,
   );
 }

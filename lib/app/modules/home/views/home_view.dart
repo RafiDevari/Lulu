@@ -9,22 +9,10 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'title'.tr,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
-      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(AppSpacing.md),
-          child: ElevatedButton(
-            onPressed: controller.toGameSelect,
-            child: Text(
-              'Go to Game Select',
-              style: Theme.of(context).textTheme.labelLarge,
-            ),
-          ),
+          child: Text('Home Text Style',style: Theme.of(context).textTheme.labelLarge)
         ),
       ),
     );
