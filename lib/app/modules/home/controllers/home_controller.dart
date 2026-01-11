@@ -5,4 +5,8 @@ class HomeController extends GetxController {
   void toGameSelect() {
     Get.toNamed(Routes.GAME_SELECT);
   }
+
+  void onTap(){
+    print("HomeController onTap");
+  }
 }
