@@ -1,6 +1,10 @@
 import 'package:get/get.dart';
+import 'package:lulu/app/modules/dengar_theme_select/views/dengar_theme_select_view.dart';
 import '../modules/dengar/bindings/dengar_binding.dart';
 import '../modules/dengar/views/dengar_view.dart';
+import '../modules/dengar_level_select/bindings/dengar_level_select_binding.dart';
+import '../modules/dengar_level_select/views/dengar_level_select_view.dart';
+import '../modules/dengar_theme_select/bindings/dengar_theme_select_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/game_select/bindings/game_select_binding.dart';
@@ -25,6 +29,17 @@ class AppPages {
       page: () => const DengarView(),
       binding: DengarBinding(),
     ),
+    GetPage(
+      name: Routes.DENGAR_THEME_SELECT,
+      page: () => const DengarThemeSelectView(),
+      binding: DengarThemeSelectBinding(),
+    ),
+    GetPage(
+      name: Routes.DENGAR_LEVEL_SELECT,
+      page: () => const DengarLevelSelectView(),
+      binding: DengarLevelSelectBinding(),
+    ),
+
     
   ];
 }
