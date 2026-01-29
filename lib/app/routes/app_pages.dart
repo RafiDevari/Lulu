@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import '../modules/dengar/bindings/dengar_binding.dart';
+import '../modules/dengar/views/dengar_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/game_select/bindings/game_select_binding.dart';
@@ -17,6 +19,11 @@ class AppPages {
       name: Routes.GAME_SELECT,
       page: () => const GameSelectView(),
       binding: GameSelectBinding(),
+    ),
+    GetPage(
+      name: Routes.DENGAR,
+      page: () => const DengarView(),
+      binding: DengarBinding(),
     ),
     
   ];

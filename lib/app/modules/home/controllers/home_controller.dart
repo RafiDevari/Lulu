@@ -2,8 +2,8 @@ import 'package:get/get.dart';
 import '../../../routes/app_routes.dart';
 
 class HomeController extends GetxController {
-  void toGameSelect() {
-    Get.toNamed(Routes.GAME_SELECT);
+  void toDengar() {
+    Get.toNamed(Routes.DENGAR);
   }
 
   void onTap(){

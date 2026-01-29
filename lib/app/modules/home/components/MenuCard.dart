@@ -4,14 +4,14 @@ import 'package:get/get.dart';
 import '../../../theme/app_radius.dart';
 import '../../../theme/app_spacing.dart';
 
-class AppMenuCard extends StatelessWidget {
+class MenuCard extends StatelessWidget {
   final IconData icon;
   final String label;
   final VoidCallback onTap;
-  final Color? backgroundColor; // Opsional, biar fleksibel
+  final Color? backgroundColor;
   final Color? iconColor;
 
-  const AppMenuCard({
+  const MenuCard({
     super.key,
     required this.icon,
     required this.label,
@@ -23,41 +23,51 @@ class AppMenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = context.theme.colorScheme;
-    const radius = AppRadius.lg;
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final iconSize = constraints.maxWidth * 0.4;
 
-    return Material(
-      color: Colors.transparent,
-      child: Ink(
-        decoration: BoxDecoration(
-          color: backgroundColor ?? colorScheme.surfaceVariant.withAlpha(80),
-          borderRadius: radius,
-          border: Border.all(
-            color: colorScheme.outline.withAlpha(30),
-          ),
-        ),
-        child: InkWell(
-          onTap: onTap,
-          borderRadius: radius,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                icon,
-                size: 32,
-                color: iconColor ?? colorScheme.primary,
+        return Material(
+          color: Colors.transparent,
+          child: Ink(
+            decoration: BoxDecoration(
+              color: backgroundColor ?? colorScheme.surfaceVariant,
+              borderRadius: AppRadius.lg,
+              border: Border.all(
+                color: colorScheme.outline,
               ),
-              const SizedBox(height: AppSpacing.sm),
-              Text(
-                label,
-                style: context.textTheme.titleSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center, // Safety buat teks panjang
+            ),
+            child: InkWell(
+              onTap: onTap,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: iconSize,
+                    width: iconSize,
+                    child: FittedBox(
+                      child: Icon(
+                        icon,
+                        color: iconColor ?? colorScheme.primary,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: AppSpacing.sm),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm),
+                    child: Text(
+                      label,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

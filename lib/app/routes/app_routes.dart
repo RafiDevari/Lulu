@@ -2,4 +2,5 @@ abstract class Routes {
   static const HOME = '/home';
   static const MENU = '/menu';
   static const GAME_SELECT = '/game-select';
+  static const DENGAR = '/dengar';
 }

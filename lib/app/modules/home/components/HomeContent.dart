@@ -17,26 +17,27 @@ class HomeContent extends GetView<HomeController> {
       childAspectRatio: 1.1,
       physics: const NeverScrollableScrollPhysics(),
       children: [
-        AppMenuCard(
+        MenuCard(
           icon: Icons.games_rounded,
-          label: 'games'.tr,
-          onTap: () => controller.onTap(),
+          label: 'hear'.tr,
+          onTap: () => controller.toDengar(),
         ),
-        AppMenuCard(
+        MenuCard(
           icon: Icons.emoji_events_rounded,
           label: 'events'.tr,
           onTap: () => controller.onTap(),
         ),
-        AppMenuCard(
+        MenuCard(
           icon: Icons.people_rounded,
           label: 'community'.tr,
           onTap: () => controller.onTap(),
         ),
-        AppMenuCard(
+        MenuCard(
           icon: Icons.settings_rounded,
           label: 'settings'.tr,
           onTap: () => controller.onTap(),
         ),
+
       ],
     );
   }

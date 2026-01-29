@@ -44,7 +44,6 @@ class HomeHeader extends StatelessWidget {
 
 class _MascotImage extends StatelessWidget {
   const _MascotImage();
-
   @override
   Widget build(BuildContext context) {
     final size = UIUtils.scale(80);
