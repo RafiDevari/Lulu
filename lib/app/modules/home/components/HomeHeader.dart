@@ -10,16 +10,13 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = context.theme.colorScheme;
-    final textTheme = context.textTheme;
-
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.md,
         vertical: AppSpacing.sm,
       ),
       decoration: BoxDecoration(
-        color: colorScheme.secondaryContainer.withAlpha(50),
+        color: context.theme.colorScheme.secondaryContainer.withAlpha(50),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
@@ -28,7 +25,7 @@ class HomeHeader extends StatelessWidget {
             child: Text(
               'whatDoYouWantToPlay'.tr,
               textAlign: TextAlign.left,
-              style: textTheme.headlineSmall
+              style: context.textTheme.headlineSmall
             ),
           ),
           const SizedBox(width: AppSpacing.md),
