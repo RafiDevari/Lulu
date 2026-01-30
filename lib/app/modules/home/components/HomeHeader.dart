@@ -28,10 +28,7 @@ class HomeHeader extends StatelessWidget {
             child: Text(
               'whatDoYouWantToPlay'.tr,
               textAlign: TextAlign.left,
-              style: textTheme.headlineSmall?.copyWith(
-                color: colorScheme.onSecondaryContainer,
-                fontWeight: FontWeight.bold,
-              ),
+              style: textTheme.headlineSmall
             ),
           ),
           const SizedBox(width: AppSpacing.md),

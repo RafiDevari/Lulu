@@ -8,15 +8,14 @@ class DengarThemeSelectView extends GetView<DengarThemeSelectController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Text(
           'DengarThemeSelect',
-          style: TextStyle(fontSize: 24),
+          style: context.textTheme.headlineLarge,
         ),
       ),
     );
   }
 }
 
-// TODO: Buat Card Sederhana dalam bentuk carousel, pass id ke theme yang diopilih dan arahkan ke level page

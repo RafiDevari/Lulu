@@ -59,7 +59,7 @@ class MenuCard extends StatelessWidget {
                       label,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: context.textTheme.titleSmall,
                     ),
                   ),
                 ],
