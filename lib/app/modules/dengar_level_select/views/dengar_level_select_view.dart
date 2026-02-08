@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../shared/component/app_bar/app_bar_back.dart';
 import '../controllers/dengar_level_select_controller.dart';
 
 class DengarLevelSelectView extends GetView<DengarLevelSelectController> {
@@ -7,11 +8,12 @@ class DengarLevelSelectView extends GetView<DengarLevelSelectController> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: const AppBarBack(),
       body: Center(
         child: Text(
-          'DengarLevelSelect',
-          style: TextStyle(fontSize: 24),
+          controller.themeId,
+          style: const TextStyle(fontSize: 24),
         ),
       ),
     );

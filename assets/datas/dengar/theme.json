@@ -1,0 +1,12 @@
+[
+  {
+  "id": "animals",
+  "title": "Animals",
+  "thumbnail": "assets/images/animals/thumb.png"
+  },
+  {
+  "id": "sports",
+  "title": "Sports",
+  "thumbnail": "assets/images/sports/thumb.png"
+  }
+]
