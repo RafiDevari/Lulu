@@ -5,7 +5,6 @@ import '../repository/dengar_theme_select_repository.dart';
 
 class DengarThemeSelectController extends GetxController {
   final ThemeRepository _themeRepository = ThemeRepository();
-
   final RxList<ThemeModel> themes = <ThemeModel>[].obs;
   final RxBool isLoading = true.obs;
 
