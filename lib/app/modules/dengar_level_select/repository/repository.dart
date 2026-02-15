@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 import '../model/level_model.dart';
 
 class LevelRepository {
-  Future<List<LevelModel>> loadThemes() async {
+  Future<List<LevelModel>> loadThemes(String theme) async {
     final jsonString = await rootBundle.loadString(
-      'assets/datas/dengar/level/animals.json',
+      'assets/datas/dengar/level/$theme.json',
     );
 
     final List decoded = jsonDecode(jsonString);

@@ -1,13 +1,13 @@
 [
   {
     "level": "1",
-    "title": "Animals",
+    "title": "Kuda",
     "thumbnail": "assets/images/animals/thumb.png",
     "locked": false
   },
   {
     "level": "2",
-    "title": "Sports",
+    "title": "Ayam",
     "thumbnail": "assets/images/sports/thumb.png",
     "locked": true
   }

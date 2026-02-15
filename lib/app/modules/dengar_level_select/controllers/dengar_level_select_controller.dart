@@ -18,10 +18,9 @@ class DengarLevelSelectController extends GetxController {
 
   Future<void> loadThemes() async {
     try {
-      final result = await _levelRepository.loadThemes();
+      final result = await _levelRepository.loadThemes(themeId);
       levels.assignAll(result);
 
-      // still printing if you want logs
       for (final theme in result) {
         print(
           'ThemeModel(id: ${theme.level}, title: ${theme.title}, thumbnail: ${theme.thumbnail}, locked: ${theme.locked})',
