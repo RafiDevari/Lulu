@@ -10,5 +10,53 @@
     "title": "Ayam",
     "thumbnail": "assets/images/sports/thumb.png",
     "locked": true
-  }
+  },
+  {
+    "level": "3",
+    "title": "Kucing",
+    "thumbnail": "assets/images/vehicles/thumb.png",
+    "locked": true
+  },
+  {
+    "level": "4",
+    "title": "Anjing",
+    "thumbnail": "assets/images/vehicles/thumb.png",
+    "locked": true
+  },
+  {
+    "level": "5",
+    "title": "Sapi",
+    "thumbnail": "assets/images/vehicles/thumb.png",
+    "locked": true
+  },
+    {
+        "level": "6",
+        "title": "Kambing",
+        "thumbnail": "assets/images/vehicles/thumb.png",
+        "locked": true
+    },
+    {
+        "level": "7",
+        "title": "Babi",
+        "thumbnail": "assets/images/vehicles/thumb.png",
+        "locked": true
+    },
+    {
+        "level": "8",
+        "title": "Domba",
+        "thumbnail": "assets/images/vehicles/thumb.png",
+        "locked": true
+    },
+    {
+        "level": "9",
+        "title": "Kelinci",
+        "thumbnail": "assets/images/vehicles/thumb.png",
+        "locked": true
+    },
+    {
+        "level": "10",
+        "title": "Gajah",
+        "thumbnail": "assets/images/vehicles/thumb.png",
+        "locked": true
+    }
 ]

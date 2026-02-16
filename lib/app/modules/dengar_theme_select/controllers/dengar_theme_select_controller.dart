@@ -18,13 +18,6 @@ class DengarThemeSelectController extends GetxController {
     try {
       final result = await _themeRepository.loadThemes();
       themes.assignAll(result);
-
-      // still printing if you want logs
-      for (final theme in result) {
-        print(
-          'ThemeModel(id: ${theme.id}, title: ${theme.title}, thumbnail: ${theme.thumbnail})',
-        );
-      }
     } catch (e) {
       print('Error loading themes: $e');
     } finally {

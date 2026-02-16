@@ -4,6 +4,7 @@ import '../../../shared/component/app_bar/app_bar_back.dart';
 import '../controllers/dengar_level_select_controller.dart';
 import '../component/level_cube.dart';
 
+
 class DengarLevelSelectView extends GetView<DengarLevelSelectController> {
   const DengarLevelSelectView({super.key});
 
@@ -15,7 +16,7 @@ class DengarLevelSelectView extends GetView<DengarLevelSelectController> {
             () => GridView.builder(
           padding: const EdgeInsets.all(24),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
+            crossAxisCount: 4,
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
           ),
@@ -25,6 +26,7 @@ class DengarLevelSelectView extends GetView<DengarLevelSelectController> {
             return LevelCube(
               id: level.level.toString(),
               locked: level.locked,
+              title: level.title
             );
           },
         ),

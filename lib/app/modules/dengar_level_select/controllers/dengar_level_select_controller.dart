@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-
+import '../../../routes/app_routes.dart';
 import '../model/level_model.dart';
 import '../repository/repository.dart';
 
@@ -31,7 +31,7 @@ class DengarLevelSelectController extends GetxController {
     }
   }
 
-  void onTap() {
-    print('Tap with themeId: $themeId');
+  void onTap(String title) {
+    Get.toNamed(Routes.DENGAR,arguments: title);
   }
 }

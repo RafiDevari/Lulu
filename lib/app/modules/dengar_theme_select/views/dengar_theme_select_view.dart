@@ -11,7 +11,7 @@ class DengarThemeSelectView extends GetView<DengarThemeSelectController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarBack(),
+      appBar: AppBarBack(),
       body: Obx(() {
         if (controller.isLoading.value) {
           return const Center(child: CircularProgressIndicator());
