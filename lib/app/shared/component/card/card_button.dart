@@ -4,14 +4,14 @@ import 'package:get/get.dart';
 import '../../../theme/app_radius.dart';
 import '../../../theme/app_spacing.dart';
 
-class MenuCard extends StatelessWidget {
+class CardButton extends StatelessWidget {
   final IconData icon;
   final String label;
   final VoidCallback onTap;
   final Color? backgroundColor;
   final Color? iconColor;
 
-  const MenuCard({
+  const CardButton({
     super.key,
     required this.icon,
     required this.label,
@@ -23,6 +23,7 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = context.theme.colorScheme;
+
     return LayoutBuilder(
       builder: (context, constraints) {
         final iconSize = constraints.maxWidth * 0.4;
@@ -38,31 +39,33 @@ class MenuCard extends StatelessWidget {
               ),
             ),
             child: InkWell(
+              borderRadius: AppRadius.lg,
               onTap: onTap,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: iconSize,
-                    width: iconSize,
-                    child: FittedBox(
-                      child: Icon(
-                        icon,
-                        color: iconColor ?? colorScheme.primary,
+              child: Padding(
+                padding: const EdgeInsets.all(AppSpacing.md),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min, // 🔥 THIS is the only fix
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: iconSize,
+                      width: iconSize,
+                      child: FittedBox(
+                        child: Icon(
+                          icon,
+                          color: iconColor ?? colorScheme.primary,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(height: AppSpacing.sm),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: AppSpacing.sm),
-                    child: Text(
+                    const SizedBox(height: AppSpacing.sm),
+                    Text(
                       label,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: context.textTheme.titleSmall,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

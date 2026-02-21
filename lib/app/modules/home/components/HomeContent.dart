@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../shared/component/card/card_button.dart';
 import '../../../theme/app_spacing.dart';
 import '../controllers/home_controller.dart';
-import 'MenuCard.dart';
 
 class HomeContent extends GetView<HomeController> {
   const HomeContent({super.key});
@@ -17,22 +17,22 @@ class HomeContent extends GetView<HomeController> {
       childAspectRatio: 1.1,
       physics: const NeverScrollableScrollPhysics(),
       children: [
-        MenuCard(
+        CardButton(
           icon: Icons.games_rounded,
           label: 'hear'.tr,
           onTap: () => controller.toDengar(),
         ),
-        MenuCard(
+        CardButton(
           icon: Icons.emoji_events_rounded,
           label: 'events'.tr,
           onTap: () => controller.onTap(),
         ),
-        MenuCard(
+        CardButton(
           icon: Icons.people_rounded,
           label: 'community'.tr,
           onTap: () => controller.onTap(),
         ),
-        MenuCard(
+        CardButton(
           icon: Icons.settings_rounded,
           label: 'settings'.tr,
           onTap: () => controller.onTap(),
