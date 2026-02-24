@@ -3,4 +3,5 @@ const Map<String, String> enUS = {
   'play': 'Play',
   'whatDoYouWantToPlay': 'What do you want to play?',
   'hear' : 'Hear',
+  'submit' : 'Submit',
 };

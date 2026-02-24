@@ -5,9 +5,10 @@ import 'dart:math';
 class DengarController extends GetxController {
   late final String title;
   final FlutterTts _flutterTts = FlutterTts();
-
   RxList<String?> droppedLetters = <String?>[].obs;
   RxList<String> letterOptions = <String>[].obs;
+  RxInt lifes = 3.obs;
+
 
   @override
   void onInit() {
@@ -23,7 +24,6 @@ class DengarController extends GetxController {
     final letters = title.split('');
     final random = Random();
 
-    // Add extra random letters
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     while (letters.length < title.length + 5) {
       letters.add(alphabet[random.nextInt(alphabet.length)]);
@@ -47,8 +47,6 @@ class DengarController extends GetxController {
 
   void placeLetter(String letter, int index) {
     final existingLetter = droppedLetters[index];
-
-    // If same letter dropped, do nothing
     if (existingLetter == letter) return;
 
     // If there is already a letter, return it to options
@@ -61,6 +59,20 @@ class DengarController extends GetxController {
 
     // Place new letter
     droppedLetters[index] = letter;
+  }
+
+  void submit() {
+    final currentAnswer = droppedLetters.join();
+
+    if (currentAnswer == title) {
+      print('WIN');
+    } else {
+      if (lifes.value > 0) {
+        lifes.value -= 1;
+      }
+
+      print('WRONG - Lifes left: ${lifes.value}');
+    }
   }
 
   @override
